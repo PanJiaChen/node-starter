@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(express.static(path.join(__dirname, '/public')))
+console.log(__dirname)
+app.use(express.static(path.join(__dirname, '../src/public/')))
 
 //init global variables
 require("./global-var")(app)

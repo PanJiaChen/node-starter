@@ -7,7 +7,7 @@ if (!config.isProduction) {
     require("babel-register");
 }
 
-var app = config.isProduction ? require('../build/app') : require('../src/app');
+var app = config.isProduction ? require('../build/app') : require('../app/app');
 var http = require('http');
 
 /**
