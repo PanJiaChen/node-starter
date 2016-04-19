@@ -8,7 +8,7 @@ var _ = require("lodash")
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade')
-
+console.log(config.isProduction)
 if (config.isProduction) {
     app.enable('view cache');
 }

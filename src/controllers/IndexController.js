@@ -18,6 +18,5 @@ router.get('/', $asyncWrapper(async function (req, res) {
 }))
 
 module.exports = {
-    router,
-    ns: '/app'
+    router
 }
