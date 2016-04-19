@@ -19,6 +19,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+app.use(express.static(path.join(__dirname, '/public')))
+
 //init global variables
 require("./global-var")(app)
 

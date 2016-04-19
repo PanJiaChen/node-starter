@@ -1,7 +1,10 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.end('node list')
+    res.render('topic/list', {
+			title: 'node',
+			content: '哈哈'
+		});
 })
 
 module.exports = {

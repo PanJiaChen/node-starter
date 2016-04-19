@@ -12,6 +12,9 @@ var paths = {
     es6: [
         'src/components/**/*.js',
         'src/controllers/**/*.js',
+        'src/global-var/**/*.js',
+        'src/models/**/*.js',
+        'src/utils/**/*.js',
         'src/services/**/*.js'
     ],
     es5: './build',
