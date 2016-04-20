@@ -8,7 +8,7 @@ var _ = require("lodash")
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade')
-console.log(config.isProduction)
+
 if (config.isProduction) {
     app.enable('view cache');
 }
@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 
 console.log(__dirname)
 app.use(express.static(path.join(__dirname, '../src/public/')))
