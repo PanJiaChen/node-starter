@@ -11,16 +11,9 @@ module.exports = {
         ]
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'static'),
         filename: '[name].js?v=[hash]',
-        publicPath: '/dist/'
-    },
-    externals:{
-        'jquery':"jquery",
-        "react-dom":"ReactDOM",
-        'react':"React",
-        'rx-lite':"Rx",
-        'antd':"antd"
+        publicPath: '/static/'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -33,7 +26,6 @@ module.exports = {
                 loaders: ['babel'],
                 include: path.join(__dirname, 'src')
             },
-            { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
             {
                 test: /\.styl$/,
                 loader: 'style-loader!css-loader!stylus-loader'
@@ -44,5 +36,12 @@ module.exports = {
             },
             {test: /\.(png|jpg|gif)$/, loader: 'url-loader'}
         ]
+    },
+    externals:{
+        "jquery":"jQuery",
+        "react-dom":"ReactDOM",
+        "react":"React",
+        "rx-lite":"Rx",
+        "antd":"antd"
     }
 };
